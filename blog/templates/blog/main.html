@@ -1,258 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <title>{{title}}</title>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+
+
+
+  <title>CodePen - Bootstrap 4 Navbar</title>
+
+    <link rel="canonical" href="https://codepen.io/abdullahturel/pen/ypYmQj">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+<style>
+.navbar { background-color: #484848; }
+.navbar .navbar-nav .nav-link { color: #fff; }
+.navbar .navbar-nav .nav-link:hover { color: #fbc531; }
+.navbar .navbar-nav .active > .nav-link { color: #fbc531; }
+
+footer a.text-light:hover { color: #fed136!important; text-decoration: none; }
+footer .cizgi { border-right: 1px solid #535e67; }
+@media (max-width: 992px) { footer .cizgi { border-right: none; } }
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+
+
 </head>
-<body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <!-- Container wrapper -->
-  <div class="container">
-    <!-- Navbar brand -->
-    <a class="navbar-brand me-2" href="https://mdbgo.com/">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-        height="16"
-        alt="MDB Logo"
-        loading="lazy"
-        style="margin-top: -1px;"
-      />
-    </a>
 
-    <!-- Toggle button -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarButtonsExample"
-      aria-controls="navbarButtonsExample"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Collapsible wrapper -->
-    <div class="collapse navbar-collapse" id="navbarButtonsExample">
-      <!-- Left links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Dashboard</a>
-        </li>
-      </ul>
-      <!-- Left links -->
-
-      <div class="d-flex align-items-center">
-        <button type="button" class="btn btn-link px-3 me-2">
-          Login
-        </button>
-        <button type="button" class="btn btn-primary me-3">
-          Sign up for free
-        </button>
-        <a
-          class="btn btn-dark px-3"
-          href="https://github.com/mdbootstrap/mdb-ui-kit"
-          role="button"
-          ><i class="fab fa-github"></i
-        ></a>
-      </div>
-    </div>
-    <!-- Collapsible wrapper -->
-  </div>
-  <!-- Container wrapper -->
-</nav>
-<!-- Navbar -->
+<body translate="no">
+  <header>
+	<!--- Navbar --->
+	<nav class="navbar navbar-expand-lg">
+		<div class="container">
+			<a class="navbar-brand text-white" href="#"><i class="fa fa-graduation-cap fa-lg mr-2"></i>BLOG</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nvbCollapse" aria-controls="nvbCollapse">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="nvbCollapse">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item pl-1">
+						<a class="nav-link" href="#"><i class="fa fa-home fa-fw mr-1"></i>Anasayfa</a>
+					</li>
+					<li class="nav-item active pl-1">
+						<a class="nav-link" href="#"><i class="fa fa-th-list fa-fw mr-1"></i>Blog</a>
+					</li>
+					<li class="nav-item pl-1">
+						<a class="nav-link" href="#"><i class="fa fa-info-circle fa-fw mr-1"></i>Hakkımızda</a>
+					</li>
+					<li class="nav-item pl-1">
+						<a class="nav-link" href="#"><i class="fa fa-phone fa-fw fa-rotate-180 mr-1"></i>İletişim</a>
+					</li>
+					<li class="nav-item pl-1">
+						<a class="nav-link" href="#"><i class="fa fa-user-plus fa-fw mr-1"></i>Kayıt Ol</a>
+					</li>
+					<li class="nav-item pl-1">
+						<a class="nav-link" href="#"><i class="fa fa-sign-in fa-fw mr-1"></i>Oturum Aç</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!--# Navbar #-->
+	</header>
 
 {% block content %}
 
 {% endblock %}
 
+<!--- Footer --->
+	<footer>
+		<div class="jumbotron jumbotron-fluid bg-secondary p-4 mt-5 mb-0">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 cizgi">
+						<div class="card bg-secondary border-0">
+							<div class="card-body text-light text-center">
+								<h5 class="card-title text-white display-4" style="font-size:30px">Telif Hakkı</h5>
+							<p class="d-inline lead">Tüm Hakları Saklıdır © 2018<br>
+							<a href="#" class="text-light d-block lead">Blog</a>
+							</p>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cizgi">
+						<div class="card bg-secondary border-0">
+							<div class="card-body text-center">
+								<h5 class="card-title text-white display-4" style="font-size:30px">İletişim</h5>
+								<a class="text-light d-block lead" style="margin-left: -20px" href="#"><i class="fa fa-phone mr-2"></i>+90 (000) 000 0 000</a>
+								<a class="text-light d-block lead" href="#"><i class="fa fa-envelope mr-2"></i>admin@localhost.com</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+						<div class="card bg-secondary border-0">
+							<div class="card-body text-center">
+							<h5 class="card-title text-white display-4" style="font-size:30px">Sosyal Medya</h5>
+
+									<a class="text-light" href="#"><i class="fa fa-facebook-square fa-fw fa-2x"></i></a>
+
+									<a class="text-light" href="#"><i class="fa fa-twitter-square fa-fw fa-2x"></i></a>
+
+									<a class="text-light" href="#"><i class="fa fa-instagram fa-fw fa-2x"></i></a>
+
+									<a class="text-light" href="#"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--# Footer #-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0-next.1/esm/popper.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"></script>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- Footer -->
-  <footer
-          class="text-center text-lg-start text-white"
-          style="background-color: #3e4551"
-          >
-    <!-- Grid container -->
-    <div class="container p-4 pb-0">
-      <!-- Section: Links -->
-      <section class="">
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid column-->
-          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">FOOTER CONTENT</h5>
-
-            <p>
-              Some footer text to test it out
-            </p>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-        </div>
-        <!--Grid row-->
-      </section>
-      <!-- Section: Links -->
-      <hr class="mb-4" />
-
-      <!-- Section: Social media -->
-      <section class="mb-4 text-center">
-        <!-- Facebook -->
-        <a
-           class="btn btn-outline-light btn-floating m-1"
-           href="#!"
-           role="button"
-           ><i class="fab fa-facebook-f"></i
-          ></a>
-
-        <!-- Twitter -->
-        <a
-           class="btn btn-outline-light btn-floating m-1"
-           href="#!"
-           role="button"
-           ><i class="fab fa-twitter"></i
-          ></a>
-
-        <!-- Google -->
-        <a
-           class="btn btn-outline-light btn-floating m-1"
-           href="#!"
-           role="button"
-           ><i class="fab fa-google"></i
-          ></a>
-
-        <!-- Instagram -->
-        <a
-           class="btn btn-outline-light btn-floating m-1"
-           href="#!"
-           role="button"
-           ><i class="fab fa-instagram"></i
-          ></a>
-
-        <!-- Linkedin -->
-        <a
-           class="btn btn-outline-light btn-floating m-1"
-           href="#!"
-           role="button"
-           ><i class="fab fa-linkedin-in"></i
-          ></a>
-
-        <!-- Github -->
-        <a
-           class="btn btn-outline-light btn-floating m-1"
-           href="#!"
-           role="button"
-           ><i class="fa-brands fa-github"></i>
-        </a>
-      </section>
-      <!-- Section: Social media -->
-    </div>
-    <!-- Grid container -->
-  </footer>
-  <!-- Footer -->
 
 </body>
 </html>
