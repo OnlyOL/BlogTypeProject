@@ -2,7 +2,7 @@
 <html lang="en"><head>
   <meta charset="UTF-8">
 
-
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
 
     <meta name="apple-mobile-web-app-title" content="CodePen">
@@ -60,8 +60,13 @@ footer .cizgi { border-right: 1px solid #535e67; }
 					<li class="nav-item active pl-1">
 						<a class="nav-link" href="#"><i class="fa fa-th-list fa-fw mr-1"></i>Blog</a>
 					</li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item pl-1">
+						<a class="nav-link" href="{% url 'logout' %}"><i class="fa fa-user-plus fa-fw mr-1"></i>Log out</a>
+                    {% else %}
 					<li class="nav-item pl-1">
-						<a class="nav-link" href="#"><i class="fa fa-user-plus fa-fw mr-1"></i>Sign in</a>
+						<a class="nav-link" href="{% url 'login' %}"><i class="fa fa-user-plus fa-fw mr-1"></i>Sign in</a>
+                    {% endif %}
 				</ul>
 			</div>
 		</div>
@@ -69,6 +74,11 @@ footer .cizgi { border-right: 1px solid #535e67; }
 	<!--# Navbar #-->
 	</header>
 
+  {% if messsages %}
+      {% for message in messages %}
+          {{ message }}
+      {% endfor %}
+  {% endif %}
 {% block content %}
 
 {% endblock %}
