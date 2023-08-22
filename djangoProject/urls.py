@@ -21,8 +21,7 @@ from blog.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="home"),
-    path('', include('django.contrib.auth.urls')),
-    path('login_user/', login_user, name="login"),
-    path('logout_user/', logout_user, name="logout"),
-    path('register_user',register_user, name="register")
+    path('commentators/', include('django.contrib.auth.urls')),
+    path('commentators/', include('commentators.urls')),
+
 ]
