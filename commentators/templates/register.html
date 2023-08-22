@@ -20,7 +20,7 @@
 		<form action="{% url 'register' %}" method=POST>
 			{% csrf_token %}
 
-			{{ form.as_table }}
+			{{ form.as_p }}
 
 
 
