@@ -63,13 +63,14 @@ footer .cizgi { border-right: 1px solid #535e67; }
                     {% if user.is_authenticated %}
                     <li class="nav-item pl-1">
 						<a class="nav-link" href="{% url 'logout' %}"><i class="fa fa-user-plus fa-fw mr-1"></i>Log out</a>
+                    </li>
                     {% else %}
 					<li class="nav-item pl-1">
 						<a class="nav-link" href="{% url 'login' %}"><i class="fa fa-user-plus fa-fw mr-1"></i>Sign in</a>
-                        </li>
-                        <li class="nav-item pl-1">
+                    </li>
+                    <li class="nav-item pl-1">
 						<a class="nav-link" href="{% url 'register' %}"><i class="fa fa-user-plus fa-fw mr-1"></i>Register</a>
-                        </li>
+                    </li>
                     {% endif %}
 				</ul>
 			</div>
