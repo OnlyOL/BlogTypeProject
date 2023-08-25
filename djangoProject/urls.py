@@ -20,7 +20,11 @@ from blog.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name="home"),
+    path('', HomeView.as_view(), name="home"),
+    path('article/<int:pk>', ArticleDetailView.as_view(), name='article-detail'),
+    path('article/delete/<int:pk>', DeletePostView.as_view(), name='article-delete'),
+    path('article/edit/<int:pk>', UpdatePostView.as_view(), name='article_edit'),
+    path('add_post/', AddPostView.as_view(), name='add_post'),
     path('commentators/', include('django.contrib.auth.urls')),
     path('commentators/', include('commentators.urls')),
 
