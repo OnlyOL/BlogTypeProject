@@ -1,7 +1,7 @@
 from django.urls import path, include
 from rest_framework import  routers
 from .views import *
-router = routers.SimpleRouter()
+router = routers.DefaultRouter()
 router.register(r'articles', BlogViewSet)
 
 
@@ -11,5 +11,5 @@ urlpatterns = [
     path('article/delete/<int:pk>', DeletePostView.as_view(), name='article-delete'),
     path('article/edit/<int:pk>', UpdatePostView.as_view(), name='article_edit'),
     path('add_post/', AddPostView.as_view(), name='add_post'),
-    path('api/', include(router.urls), name="register")
+    path('api/', include(router.urls), name="api")
 ]
