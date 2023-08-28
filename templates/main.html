@@ -58,7 +58,7 @@ footer .cizgi { border-right: 1px solid #535e67; }
 						<a class="nav-link" href="{% url 'home' %}"><i class="fa fa-home fa-fw mr-1"></i>Home page</a>
 					</li>
 					<li class="nav-item active pl-1">
-						<a class="nav-link" href="#"><i class="fa fa-th-list fa-fw mr-1"></i>Blog</a>
+						<a class="nav-link" href="{% url 'articles' %}"><i class="fa fa-th-list fa-fw mr-1"></i>Blog</a>
 					</li>
                     {% if user.is_authenticated %}
                     <li class="nav-item pl-1">
