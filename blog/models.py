@@ -17,3 +17,13 @@ class Post(models.Model):
     # Create your models here.
     def get_absolute_url(self):
         return reverse('article-detail', args=(str(self.id)))
+
+
+class Comment(models.Model):
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, related_name="comments", on_delete=models.CASCADE)
+    body = models.TextField()
+    date_added = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return '%s - %s' % (self.post.title, self.author)
