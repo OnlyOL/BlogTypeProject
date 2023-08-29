@@ -6,6 +6,21 @@
     <a href={% url 'article_edit' post.pk %}>Edit</a>
     <a href={% url 'article-delete' post.pk %}>Delete</a>
 <hr>
-<br>
+<br><br/>
 <p>{{ post.body }}</p>
+<hr>
+<br><bt/>
+ <h2>Comments...</h2>
+    {% if not post.comments.all %}
+        No comments Yet...
+    {% else %}
+    {% for comment in post.comments.all %}
+        <strong>
+     {{comment.author }}
+     {{ comment.date_added }}
+        </strong>
+        <br/>
+        {{ comment.body }}
+        {% endfor %}
+    {% endif %}
 {% endblock %}
