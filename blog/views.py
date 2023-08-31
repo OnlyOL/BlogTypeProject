@@ -42,3 +42,4 @@ class BlogViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = BlogSerializer
     permission_classes = (IsAuthenticatedOrReadOnly,)
+    # authentication_classes = (TokenAuthentication,)

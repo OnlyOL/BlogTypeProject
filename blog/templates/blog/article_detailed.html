@@ -6,7 +6,7 @@
     <a href={% url 'article_edit' post.pk %}>Edit</a>
     <a href={% url 'article-delete' post.pk %}>Delete</a>
 <hr>
-<p>{{ post.body }}</p>
+<p>{{ post.body|safe }}</p>
 <hr>
  <h2>Comments...</h2>
     {% if not post.comments.all %}
