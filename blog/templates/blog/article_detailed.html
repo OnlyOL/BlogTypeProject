@@ -1,10 +1,15 @@
 {% extends 'main.html' %}
 
 {% block content %}
+
 <h1>{{ post.title }}</h1>
+    {% if user.is_authenticated %}
+        {% if user.id == post.author.id %}
 <small>By: {{ post.author }} - {{ post.post_date }}</small>
     <a href={% url 'article_edit' post.pk %}>Edit</a>
     <a href={% url 'article-delete' post.pk %}>Delete</a>
+        {% endif %}
+    {% endif %}
 <hr>
 <p>{{ post.body|safe }}</p>
 <hr>

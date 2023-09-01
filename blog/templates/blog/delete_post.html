@@ -1,6 +1,8 @@
 {% extends 'main.html' %}
 
 {% block content %}
+ {% if user.is_authenticated %}
+        {% if user.id == post.author.id %}
     <h1>Удаление статьи</h1>
     <br><br/>
     <hr>
@@ -10,4 +12,8 @@
      <button type="submit" class="btn btn-danger">Удалить</button>
     </form>
 
+    {% endif %}
+ {% else %}
+      <p>You're not allowed here!</p>
+ {% endif %}
 {% endblock %}
