@@ -11,7 +11,9 @@
         {% endif %}
     {% endif %}
 <hr>
+    {% if post.image %}
     <img src="{{ post.image.url }}" alt="postimage"> <br/>
+    {% endif %}
 <p>{{ post.body|safe }}</p>
 <hr>
  <h2>Comments...</h2>
