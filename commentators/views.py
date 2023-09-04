@@ -1,7 +1,13 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from .forms import CustomUserCreationForm
+from django.views import generic
+from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
+
+
+from .forms import CustomUserCreationForm, EditProfileForm
+
 
 # Create your views here.
 def login_user(request):
@@ -49,3 +55,14 @@ def register_user(request):
         return render(request, 'register.html', {
             'form': form,
         })
+
+
+class UserEditView(generic.UpdateView, LoginRequiredMixin):
+    form_class = EditProfileForm
+    template_name = 'edit_profile.html'
+    success_url = reverse_lazy('home')
+
+    def get_object(self):
+        return self.request.user
+
+
