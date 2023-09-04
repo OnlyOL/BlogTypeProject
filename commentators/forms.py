@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
@@ -38,3 +38,15 @@ class CustomUserCreationForm(UserCreationForm):
             self.cleaned_data['password1']
         )
         return user
+
+
+class EditProfileForm(UserChangeForm):
+    email = forms.EmailField(widget=forms.EmailInput)
+    username = forms.CharField(label='Username', min_length=5, max_length=150)
+    first_name = forms.CharField(label='Firstname', max_length=150)
+    last_name = forms.CharField(label='Lastname', max_length=150)
+
+
+    class Meta:
+        model = User
+        fields = ('username', 'email', 'first_name', 'last_name', 'last_login', 'is_active', 'date_joined')

@@ -17,16 +17,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
-
+from django.contrib.auth import views as auth_views
 from blog.views import HomeView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomeView.as_view(), name="home"),
     path('blog/', include('blog.urls')),
+    path('<int:uid>/password/', auth_views.PasswordChangeView.as_view(template_name='change-password.html'), name="passchange"),
     path('commentators/', include('django.contrib.auth.urls')),
     path('commentators/', include('commentators.urls')),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
