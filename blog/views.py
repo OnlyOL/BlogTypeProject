@@ -1,8 +1,6 @@
-from django.shortcuts import render, HttpResponse, redirect
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
-
 from .serializers import *
 from .models import Post
 from django.urls import reverse_lazy
@@ -43,3 +41,4 @@ class BlogViewSet(viewsets.ModelViewSet):
     serializer_class = BlogSerializer
     permission_classes = (IsAuthenticatedOrReadOnly,)
     # authentication_classes = (TokenAuthentication,)
+
