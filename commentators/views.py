@@ -4,7 +4,8 @@ from django.contrib import messages
 from django.views import generic
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
-
+from django.contrib.auth.models import User
+from django.views.generic import ListView
 
 from .forms import CustomUserCreationForm, EditProfileForm
 
@@ -66,3 +67,6 @@ class UserEditView(generic.UpdateView, LoginRequiredMixin):
         return self.request.user
 
 
+class UserPageView(ListView, LoginRequiredMixin):
+    model = User
+    template_name = 'userpage.html'
